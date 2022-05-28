@@ -1,4 +1,5 @@
 from win32com.client import Dispatch
+import tkinter
 
 from time import sleep
 
@@ -137,20 +138,28 @@ Balihabeedha balihabi
 Vallae vallae balihabi
 
 Halamithi habibo'''
-# speaker = Dispatch("SAPI.SpVoice")
+
+speaker = Dispatch("SAPI.SpVoice")
 mp = Dispatch("WMPlayer.OCX")
+mp2 = Dispatch("WMPlayer.OCX")
+
 # speaker.volume = 50
-# speaker.rate = 3
+speaker.rate = 2
 # mp.settings.rate = 3
 
 tune = mp.newMedia("Malama pitha pitha (Official video) Arabic Kuthu - Halamithi Habibo - Beast Movie - Thalapathy Vijay.mp4")
+tune2 = mp2.newMedia("Kaathuvaakula Rendu Kaadhal - Dippam Dappam Lyric- Vijay Sethupathi, Anirudh, Vignesh Shivan.mp4")
 mp.currentPlaylist.appendItem(tune)
+mp2.currentPlaylist.appendItem(tune)
 mp.controls.play()
+mp2.controls.play()
 sleep(1)
 
 mp.controls.playItem(tune)
-# speaker.Speak(speak)
+mp2.controls.playItem(tune)
+speaker.Speak(speak)
 input("Press Enter to stop playing")
 
 mp.controls.stop()
+mp2.controls.stop()
 
