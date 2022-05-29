@@ -1,6 +1,5 @@
 from tkinter import *
 from PIL import Image
-from turtle import color
 from PIL import Image, ImageTk
 from win32com.client import Dispatch
 from time import sleep
@@ -8,12 +7,9 @@ from tkinter import ttk
 import tkinter as tk
 import os
 
-global button1
-global vol
-
 root = Tk()
 root.resizable(width=False, height=False)
-root.title("DJ")
+root.title("DJ Khabi🦖")
 
 frameCnt = 14
 frames = [PhotoImage(file='api\disc.gif',format = 'gif -index %i' %(i)) for i in range(frameCnt)]
@@ -21,6 +17,7 @@ playimg = ImageTk.PhotoImage(Image.open("api/pb.png"))
 pauseimg = ImageTk.PhotoImage(Image.open("api/pause.png"))
 previmg = ImageTk.PhotoImage(Image.open("api/next.png"))
 nextimg = ImageTk.PhotoImage(Image.open("api/prev.png"))
+
 muteimg1 = Image.open("api/mute.png")
 muteimg2=muteimg1.resize((20,20), Image.ANTIALIAS)
 muteimg=ImageTk.PhotoImage(muteimg2)
@@ -58,7 +55,8 @@ def pause():
 def mute():
     mp.settings.Mute=True
     button3=Button(root,image=unmuteimg,command=unmute,height=20,width=20)
-    button3.place(anchor=CENTER,x=498/2,y=673/2)    
+    button3.place(anchor=CENTER,x=498/2,y=673/2)   
+
 def unmute():
     mp.settings.Mute=False
     button3=Button(root,image=muteimg,command=mute,height=20,width=20)
@@ -105,6 +103,8 @@ slider.set(100)
 
 
 slider.place(anchor=CENTER,x=120/2,y=473/2)
+root.iconbitmap(r'C:\Users\ashwi\OneDrive\Desktop\OS\api\icon.ico')
+
 root.attributes('-alpha',0.5)
 root.after(0, update, 0)
 
