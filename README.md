@@ -19,10 +19,10 @@ Animated spinning disc while music is playing
 
 ## Setup
 
-Clone the repository
-Install the required libraries using pip install -r requirements.txt
-Add your audio files to the api/songs directory
-Run python main.py to start the player
+1. Clone the repository
+2. Install the required libraries
+3. Add your audio files to the api/songs directory
+4. Run python main.py to start the player
 
 ### Note
 
