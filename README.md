@@ -5,10 +5,10 @@ This is a GUI based audio player built using python's tkinter library. It uses W
 
 ## Features
 
-Play, pause, next and previous buttons to control playback
-Mute and unmute button to control volume
-Volume slider to adjust the volume
-Animated spinning disc while music is playing
+- Play, pause, next and previous buttons to control playback
+- Mute and unmute button to control volume
+- Volume slider to adjust the volume
+- Animated spinning disc while music is playing
 
 ## Requirements
 
