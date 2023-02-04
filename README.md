@@ -12,10 +12,10 @@ Animated spinning disc while music is playing
 
 ## Requirements
 
-Python 3
-tkinter library
-Pillow library
-win32com library
+- Python 3
+- *tkinter* library
+- *Pillow* library
+- *win32com* library
 
 ## Setup
 
